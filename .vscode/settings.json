@@ -1,0 +1,47 @@
+{
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "cSpell.words": [
+    "antd",
+    "codegen",
+    "commitlint",
+    "coplan",
+    "editorjs",
+    "hnbi",
+    "hollandandbarrett",
+    "norender",
+    "Normalise",
+    "oxfmt",
+    "oxlint",
+    "pagebuilder",
+    "pino",
+    "Popconfirm",
+    "preprod",
+    "Qrcode",
+    "radashi",
+    "rjsf",
+    "stylelint",
+    "stylelintignore",
+    "svgr",
+    "tailwindcss",
+    "tsgolint",
+    "undeprecate"
+  ],
+  "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+  "oxc.enable.oxlint": true
+}

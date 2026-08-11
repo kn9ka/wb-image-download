@@ -1,0 +1,312 @@
+{
+  "communities": {
+    "0": [
+      "ref_node",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowimportingtsextensions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_allowsyntheticdefaultimports",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_forceconsistentcasinginfilenames",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_compileroptions_tsbuildinfofile",
+      "tsconfig_compileroptions_types",
+      "tsconfig_compileroptions_usedefineforclassfields",
+      "tsconfig_compileroptions_verbatimmodulesyntax"
+    ],
+    "1": [
+      "oxfmt",
+      "oxlint",
+      "package_devdependencies",
+      "package_devdependencies_oxfmt",
+      "package_devdependencies_oxlint",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "types_node",
+      "types_react",
+      "types_react_dom",
+      "typescript",
+      "vite",
+      "vitejs_plugin_react"
+    ],
+    "2": [
+      "emotion_react",
+      "emotion_styled",
+      "mui_icons_material",
+      "mui_material",
+      "package_dependencies",
+      "package_dependencies_emotion_react",
+      "package_dependencies_emotion_styled",
+      "package_dependencies_mui_icons_material",
+      "package_dependencies_mui_material",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_tanstack_react_query",
+      "react",
+      "react_dom",
+      "tanstack_react_query"
+    ],
+    "3": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_format",
+      "package_scripts_format_check",
+      "package_scripts_lint",
+      "package_scripts_preview",
+      "package_scripts_typecheck",
+      "package_type",
+      "package_version"
+    ],
+    "4": [
+      "ref_src_app",
+      "ref_src_entities",
+      "ref_src_features",
+      "ref_src_pages",
+      "ref_src_shared",
+      "ref_src_widgets",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_paths_app",
+      "tsconfig_paths_entities",
+      "tsconfig_paths_features",
+      "tsconfig_paths_pages",
+      "tsconfig_paths_shared",
+      "tsconfig_paths_widgets"
+    ],
+    "5": [
+      "agents_md_project_conventions",
+      "agents_skills_feature_sliced_design_references_cross_import_patterns_cross_import_resolution",
+      "agents_skills_feature_sliced_design_references_excessive_entities_entities_threshold",
+      "agents_skills_feature_sliced_design_references_framework_integration_framework_integration",
+      "agents_skills_feature_sliced_design_references_migration_guide_migration",
+      "agents_skills_feature_sliced_design_references_practical_examples_examples",
+      "agents_skills_feature_sliced_design_skill_fsd_v21",
+      "agents_skills_feature_sliced_design_skill_layer_order",
+      "agents_skills_feature_sliced_design_skill_public_api",
+      "agents_skills_ponytail_skill_ponytail"
+    ],
+    "6": [
+      "src_app_app",
+      "src_app_app_app",
+      "src_app_main",
+      "src_app_main_root",
+      "src_app_providers_appproviders",
+      "src_app_providers_appproviders_appproviders",
+      "src_app_providers_appproviders_queryclient",
+      "src_pages_home_index",
+      "src_pages_home_ui_homepage",
+      "src_pages_home_ui_homepage_homepage"
+    ],
+    "7": [
+      "oxfmtrc",
+      "oxfmtrc_ignorepatterns",
+      "oxfmtrc_schema",
+      "ref_agents_skills",
+      "ref_graphify_out",
+      "ref_readme_md",
+      "ref_skills_lock_json"
+    ],
+    "8": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_es2022",
+      "tsconfig_compileroptions_lib"
+    ],
+    "9": [
+      "ref_src",
+      "ref_vite_config_ts",
+      "tsconfig",
+      "tsconfig_include"
+    ],
+    "10": [
+      "agents_skills_feature_sliced_design_references_asset_handling_asset_locality",
+      "agents_skills_feature_sliced_design_references_layer_structure_layer_structure"
+    ],
+    "11": [
+      "agents_skills_grill_me_agents_openai_agent_config",
+      "agents_skills_grill_me_skill_grill_me"
+    ],
+    "12": [
+      "index_html_vite_entrypoint",
+      "readme_project_name"
+    ],
+    "13": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1111111111111111,
+    "1": 0.11764705882352941,
+    "2": 0.13333333333333333,
+    "3": 0.15384615384615385,
+    "4": 0.15384615384615385,
+    "5": 0.2,
+    "6": 0.28888888888888886,
+    "7": 0.2857142857142857,
+    "8": 0.5,
+    "9": 0.5,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 19
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 8
+    },
+    {
+      "id": "tsconfig_compileroptions_paths",
+      "label": "paths",
+      "degree": 7
+    },
+    {
+      "id": "agents_skills_feature_sliced_design_skill_fsd_v21",
+      "label": "Feature-Sliced Design v2.1",
+      "degree": 6
+    },
+    {
+      "id": "oxfmtrc_ignorepatterns",
+      "label": "ignorePatterns",
+      "degree": 5
+    },
+    {
+      "id": "tsconfig_compileroptions_lib",
+      "label": "lib",
+      "degree": 4
+    },
+    {
+      "id": "src_pages_home_ui_homepage_homepage",
+      "label": "HomePage()",
+      "degree": 3
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 3
+    },
+    {
+      "id": "agents_skills_feature_sliced_design_skill_public_api",
+      "label": "Slice public API",
+      "degree": 3
+    },
+    {
+      "id": "package_dependencies_emotion_react",
+      "label": "@emotion/react",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "WB Image Download project conventions",
+      "target": "Ponytail",
+      "source_files": [
+        "AGENTS.md",
+        ".agents/skills/ponytail/SKILL.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "WB Image Download project conventions",
+      "target": "Feature-Sliced Design v2.1",
+      "source_files": [
+        "AGENTS.md",
+        ".agents/skills/feature-sliced-design/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `WB Image Download project conventions` unexpectedly reaches hub `Feature-Sliced Design v2.1`"
+    },
+    {
+      "source": "Vite application entrypoint",
+      "target": "wb-image-download",
+      "source_files": [
+        "index.html",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "Entities extraction threshold",
+      "target": "Feature-Sliced Design v2.1",
+      "source_files": [
+        ".agents/skills/feature-sliced-design/references/excessive-entities.md",
+        ".agents/skills/feature-sliced-design/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "conceptually_related_to",
+      "why": "peripheral node `Entities extraction threshold` unexpectedly reaches hub `Feature-Sliced Design v2.1`"
+    },
+    {
+      "source": "FSD migration guidance",
+      "target": "Feature-Sliced Design v2.1",
+      "source_files": [
+        ".agents/skills/feature-sliced-design/references/migration-guide.md",
+        ".agents/skills/feature-sliced-design/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `FSD migration guidance` unexpectedly reaches hub `Feature-Sliced Design v2.1`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `compilerOptions` connect `Community 0` to `Community 8`, `Community 9`, `Community 4`?",
+      "why": "High betweenness centrality (0.090) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 1` to `Community 3`?",
+      "why": "High betweenness centrality (0.083) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `Community 2` to `Community 3`?",
+      "why": "High betweenness centrality (0.074) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `$schema`, `.agents/skills/`, `README.md` to the rest of the system?",
+      "why": "73 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
