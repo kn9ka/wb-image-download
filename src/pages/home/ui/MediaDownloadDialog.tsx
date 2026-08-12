@@ -1,6 +1,5 @@
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import {
   Box,
   Button,
@@ -13,11 +12,16 @@ import {
   IconButton,
   ImageList,
   ImageListItem,
+  LinearProgress,
 } from "@mui/material";
+import { useState } from "react";
 
-import { media } from "../model/media";
+import { useNotification } from "@/shared/ui/notifications";
 
-const toteBag = new URL("./tote-bag.png", import.meta.url).href;
+import { downloadMedia } from "../model/downloadMedia";
+import { ProductMediaType, type ProductMedia } from "../model/ProductMedia";
+import { useMediaSelection } from "../model/useMediaSelection";
+import { getPhotoMedia, getVideoMedia } from "../lib/filters";
 
 const checkboxIcon = (
   <Box
@@ -48,88 +52,118 @@ const checkedCheckboxIcon = (
 );
 
 type MediaDownloadDialogProps = {
-  isAllSelected: boolean;
-  isOpen: boolean;
-  isPartlySelected: boolean;
-  onClose: () => void;
-  onDownload: (type: "photo" | "video") => void;
-  onToggleAll: () => void;
-  onToggleMedia: (id: string) => void;
-  selectedMedia: string[];
+  articleId: string;
+  media: ProductMedia[];
+  onClose: VoidFunction;
 };
 
-export const MediaDownloadDialog = ({
-  isAllSelected,
-  isOpen,
-  isPartlySelected,
-  onClose,
-  onDownload,
-  onToggleAll,
-  onToggleMedia,
-  selectedMedia,
-}: MediaDownloadDialogProps) => (
-  <Dialog fullWidth maxWidth="md" onClose={onClose} open={isOpen}>
-    <DialogTitle>
-      Скачать фотографии и видео
-      <IconButton
-        aria-label="Закрыть"
-        onClick={onClose}
-        sx={{ position: "absolute", right: 8, top: 8 }}
-      >
-        <CloseIcon />
-      </IconButton>
-    </DialogTitle>
-    <DialogContent dividers>
-      <FormControlLabel
-        control={
-          <Checkbox
-            checked={isAllSelected}
-            indeterminate={isPartlySelected}
-            onChange={onToggleAll}
-          />
-        }
-        label="Выбрать всё"
-      />
-      <ImageList cols={3} gap={16} sx={{ mt: 2 }}>
-        {media.map(({ id, label, type }) => (
-          <ImageListItem key={id} sx={{ position: "relative" }}>
-            <Box
-              alt={label}
-              component="img"
-              src={toteBag}
-              sx={{
-                aspectRatio: "1",
-                borderRadius: 1,
-                display: "block",
-                objectFit: "cover",
-                width: "100%",
-              }}
-            />
-            <Checkbox
-              checked={selectedMedia.includes(id)}
-              checkedIcon={checkedCheckboxIcon}
-              disableRipple
-              icon={checkboxIcon}
-              onChange={() => onToggleMedia(id)}
-              slotProps={{ input: { "aria-label": `Выбрать ${label}` } }}
-              sx={{ left: 4, p: 0, position: "absolute", top: 4 }}
-            />
-            {type === "video" && (
-              <PlayCircleIcon
-                aria-label={label}
-                color="primary"
-                sx={{ bottom: 8, fontSize: 40, position: "absolute", right: 8 }}
+export const MediaDownloadDialog = ({ articleId, media, onClose }: MediaDownloadDialogProps) => {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const { notify } = useNotification();
+  const { isAllSelected, isPartlySelected, selectedMedia, toggleAllMedia, toggleMedia } =
+    useMediaSelection(media.map(({ id }) => id));
+
+  const downloadSelectedMedia = async (type: ProductMediaType) => {
+    setIsDownloading(true);
+
+    try {
+      const count = await downloadMedia({ articleId, media, selectedMedia, type });
+
+      if (!count) {
+        notify("Выберите файлы");
+        return;
+      }
+
+      if (type === ProductMediaType.PHOTO) {
+        notify(`Скачивается архив: ${count} фото`);
+        return;
+      }
+
+      if (type === ProductMediaType.VIDEO) {
+        notify(`Скачивается видео: ${count}`);
+        return;
+      }
+    } catch {
+      notify("Не удалось собрать архив");
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const photos = getPhotoMedia(media);
+  const videos = getVideoMedia(media);
+
+  return (
+    <Dialog fullWidth maxWidth="md" onClose={onClose} open>
+      <DialogTitle>
+        Скачать фотографии и видео
+        <IconButton
+          aria-label="Закрыть"
+          onClick={onClose}
+          sx={{ position: "absolute", right: 8, top: 8 }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
+      <DialogContent dividers>
+        {isDownloading && <LinearProgress aria-label="Собираем архив" sx={{ mb: 2 }} />}
+        <Box>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={isAllSelected}
+                disabled={isDownloading}
+                indeterminate={isPartlySelected}
+                onChange={toggleAllMedia}
               />
-            )}
-          </ImageListItem>
-        ))}
-      </ImageList>
-    </DialogContent>
-    <DialogActions>
-      <Button onClick={() => onDownload("photo")}>Скачать фото</Button>
-      <Button onClick={() => onDownload("video")} variant="contained">
-        Скачать видео
-      </Button>
-    </DialogActions>
-  </Dialog>
-);
+            }
+            label={`Выбрать всё (${selectedMedia.length} из ${media.length})`}
+          />
+        </Box>
+        <ImageList cols={3} gap={16} sx={{ mt: 2 }}>
+          {photos.map(({ id, label, previewUrl }) => (
+            <ImageListItem key={id} sx={{ position: "relative" }}>
+              <Box
+                alt={label}
+                component="img"
+                src={previewUrl}
+                sx={{
+                  aspectRatio: "1",
+                  borderRadius: 1,
+                  display: "block",
+                  objectFit: "cover",
+                  width: "100%",
+                }}
+              />
+              <Checkbox
+                checked={selectedMedia.includes(id)}
+                checkedIcon={checkedCheckboxIcon}
+                disabled={isDownloading}
+                disableRipple
+                icon={checkboxIcon}
+                onChange={() => toggleMedia(id)}
+                slotProps={{ input: { "aria-label": `Выбрать ${label}` } }}
+                sx={{ left: 4, p: 0, position: "absolute", top: 4 }}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </DialogContent>
+      <DialogActions>
+        <Button
+          disabled={isDownloading || photos.length === 0}
+          onClick={() => void downloadSelectedMedia(ProductMediaType.PHOTO)}
+        >
+          Скачать фото
+        </Button>
+        <Button
+          disabled={isDownloading || videos.length === 0}
+          onClick={() => void downloadSelectedMedia(ProductMediaType.VIDEO)}
+          variant="contained"
+        >
+          Скачать видео
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};

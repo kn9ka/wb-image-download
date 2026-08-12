@@ -1,0 +1,305 @@
+{
+  "generated_at": "2026-08-12T03:20:53.476664+00:00",
+  "nodes": {
+    "src_pages_home_api_getproductmedia": {
+      "code_fingerprint": "107b2052bf215679cde41f492a0b37743cbd5912a4e6b8acdbddb618de5d245b",
+      "label": "getProductMedia.ts",
+      "last": "2026-08-12T03:03:05.582389+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T03:03:05.582389+00:00",
+          "outcome": "useful",
+          "q": "окей, серверный прокси может подойти. покажи вариант реализации"
+        },
+        {
+          "date": "2026-08-12T02:50:29.585251+00:00",
+          "outcome": "useful",
+          "q": "проведи эксперимент, сможем ли мы миграцией на remix пофиксить проблему фетча // Mock for https://www.wildberries.ru/__internal/card/cards/v4/detail."
+        },
+        {
+          "date": "2026-08-12T02:22:17.190633+00:00",
+          "outcome": "useful",
+          "q": "[getProductMedia.ts](src/pages/home/api/getProductMedia.ts) мне не нравится код в этом файле, что можем исправить?"
+        },
+        {
+          "date": "2026-08-12T01:59:37.626295+00:00",
+          "outcome": "useful",
+          "q": "давай теперь разберемся с home все ли файлы здесь на своих местах и нет ли смысла разнести хелперы модели и тп?"
+        }
+      ],
+      "score": 3.996983929,
+      "source_file": "src/pages/home/api/getProductMedia.ts",
+      "status": "preferred",
+      "uses": 4
+    },
+    "src_pages_home_api_getproductmedia_getproductmedia": {
+      "code_fingerprint": "107b2052bf215679cde41f492a0b37743cbd5912a4e6b8acdbddb618de5d245b",
+      "label": "getProductMedia()",
+      "last": "2026-08-12T03:11:50.365380+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T03:11:50.365380+00:00",
+          "outcome": "useful",
+          "q": "окей, отлично. теперь давай закроем вопрос с перекодированием видео из .ts в mp4. какие у нас варианты?"
+        },
+        {
+          "date": "2026-08-12T03:03:05.582389+00:00",
+          "outcome": "useful",
+          "q": "окей, серверный прокси может подойти. покажи вариант реализации"
+        },
+        {
+          "date": "2026-08-12T02:50:29.585251+00:00",
+          "outcome": "useful",
+          "q": "проведи эксперимент, сможем ли мы миграцией на remix пофиксить проблему фетча // Mock for https://www.wildberries.ru/__internal/card/cards/v4/detail."
+        },
+        {
+          "date": "2026-08-12T02:22:17.190633+00:00",
+          "outcome": "useful",
+          "q": "[getProductMedia.ts](src/pages/home/api/getProductMedia.ts) мне не нравится код в этом файле, что можем исправить?"
+        },
+        {
+          "date": "2026-08-12T02:10:33.965250+00:00",
+          "outcome": "useful",
+          "q": "setProductMedia с await getProductMedia — это правильная работа, мы ничего не сломаем этим await?"
+        }
+      ],
+      "score": 4.997014005,
+      "source_file": "src/pages/home/api/getProductMedia.ts",
+      "status": "preferred",
+      "uses": 5
+    },
+    "src_pages_home_lib_useform": {
+      "code_fingerprint": "04f0dd0fdc207160dc726c2c000fb899d4712d712a4f1262989ce0a3594cf11b",
+      "label": "useForm.ts",
+      "last": "2026-08-12T01:59:37.626295+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T01:59:37.626295+00:00",
+          "outcome": "useful",
+          "q": "давай теперь разберемся с home все ли файлы здесь на своих местах и нет ли смысла разнести хелперы модели и тп?"
+        }
+      ],
+      "score": 0.99869696,
+      "source_file": "src/pages/home/lib/useForm.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_pages_home_lib_useform_useform": {
+      "code_fingerprint": "04f0dd0fdc207160dc726c2c000fb899d4712d712a4f1262989ce0a3594cf11b",
+      "label": "useForm()",
+      "last": "2026-08-12T02:19:36.799268+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T02:19:36.799268+00:00",
+          "outcome": "useful",
+          "q": "сделай блокировку повторного submit через isSubmitting"
+        },
+        {
+          "date": "2026-08-12T02:10:33.965250+00:00",
+          "outcome": "useful",
+          "q": "setProductMedia с await getProductMedia — это правильная работа, мы ничего не сломаем этим await?"
+        }
+      ],
+      "score": 1.997889537,
+      "source_file": "src/pages/home/lib/useForm.ts",
+      "status": "preferred",
+      "uses": 2
+    },
+    "src_pages_home_model_downloadmedia": {
+      "code_fingerprint": "6e4de302abfdb521cb303cf9ce8d21a634adf342ad187f565a3487c91f416baf",
+      "label": "downloadMedia.ts",
+      "last": "2026-08-12T01:59:37.626295+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T01:59:37.626295+00:00",
+          "outcome": "useful",
+          "q": "давай теперь разберемся с home все ли файлы здесь на своих местах и нет ли смысла разнести хелперы модели и тп?"
+        }
+      ],
+      "score": 0.99869696,
+      "source_file": "src/pages/home/model/downloadMedia.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_pages_home_model_downloadmedia_downloadmedia": {
+      "code_fingerprint": "6e4de302abfdb521cb303cf9ce8d21a634adf342ad187f565a3487c91f416baf",
+      "label": "downloadMedia()",
+      "last": "2026-08-12T03:11:50.365380+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T03:11:50.365380+00:00",
+          "outcome": "useful",
+          "q": "окей, отлично. теперь давай закроем вопрос с перекодированием видео из .ts в mp4. какие у нас варианты?"
+        },
+        {
+          "date": "2026-08-12T02:12:28.269732+00:00",
+          "outcome": "useful",
+          "q": "Исправь MediaDownloadDialog.tsx: двойных кондишенов быть не должно"
+        }
+      ],
+      "score": 1.998757569,
+      "source_file": "src/pages/home/model/downloadMedia.ts",
+      "status": "preferred",
+      "uses": 2
+    },
+    "src_pages_home_model_downloadmedia_getvideosegmentnames": {
+      "code_fingerprint": "6e4de302abfdb521cb303cf9ce8d21a634adf342ad187f565a3487c91f416baf",
+      "label": "getVideoSegmentNames()",
+      "last": "2026-08-12T03:11:50.365380+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T03:11:50.365380+00:00",
+          "outcome": "useful",
+          "q": "окей, отлично. теперь давай закроем вопрос с перекодированием видео из .ts в mp4. какие у нас варианты?"
+        }
+      ],
+      "score": 0.999854773,
+      "source_file": "src/pages/home/model/downloadMedia.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_pages_home_model_usemediaselection_usemediaselection": {
+      "code_fingerprint": "d800f0210c19bfd61bc13bce45d3072e9488413240a750fd8bc5ad74eec1e880",
+      "label": "useMediaSelection()",
+      "last": "2026-08-12T02:01:19.836314+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T02:01:19.836314+00:00",
+          "outcome": "useful",
+          "q": "мне кажется в productMediaContext.tsx слишком много всего, можем как это исправить?"
+        }
+      ],
+      "score": 0.998724258,
+      "source_file": "src/pages/home/model/useMediaSelection.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_pages_home_ui_homepage": {
+      "code_fingerprint": "aca81001f160926d0493df314d83f08991d47eeda2ad5e79b8934f8425853142",
+      "label": "HomePage.tsx",
+      "last": "2026-08-12T01:59:37.626295+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T01:59:37.626295+00:00",
+          "outcome": "useful",
+          "q": "давай теперь разберемся с home все ли файлы здесь на своих местах и нет ли смысла разнести хелперы модели и тп?"
+        },
+        {
+          "date": "2026-08-12T01:39:35.644752+00:00",
+          "outcome": "useful",
+          "q": "@src/pages/home/ мне не нравится то как используются данные. давай не будем прокидывать их по пропсам, а сделаем контекст провайдер."
+        }
+      ],
+      "score": 1.997072959,
+      "source_file": "src/pages/home/ui/HomePage.tsx",
+      "status": "preferred",
+      "uses": 2
+    },
+    "src_pages_home_ui_homepage_homepage": {
+      "code_fingerprint": "aca81001f160926d0493df314d83f08991d47eeda2ad5e79b8934f8425853142",
+      "label": "HomePage()",
+      "last": "2026-08-12T02:50:29.585251+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T02:50:29.585251+00:00",
+          "outcome": "useful",
+          "q": "проведи эксперимент, сможем ли мы миграцией на remix пофиксить проблему фетча // Mock for https://www.wildberries.ru/__internal/card/cards/v4/detail."
+        },
+        {
+          "date": "2026-08-12T02:19:36.799268+00:00",
+          "outcome": "useful",
+          "q": "сделай блокировку повторного submit через isSubmitting"
+        },
+        {
+          "date": "2026-08-12T02:10:33.965250+00:00",
+          "outcome": "useful",
+          "q": "setProductMedia с await getProductMedia — это правильная работа, мы ничего не сломаем этим await?"
+        },
+        {
+          "date": "2026-08-12T02:01:19.836314+00:00",
+          "outcome": "useful",
+          "q": "мне кажется в productMediaContext.tsx слишком много всего, можем как это исправить?"
+        }
+      ],
+      "score": 3.996126173,
+      "source_file": "src/pages/home/ui/HomePage.tsx",
+      "status": "preferred",
+      "uses": 4
+    },
+    "src_pages_home_ui_mediadownloaddialog": {
+      "code_fingerprint": "011f6f8a2789187976964d5f616f1cf8080360f94e867869d88f95f81c606d50",
+      "label": "MediaDownloadDialog.tsx",
+      "last": "2026-08-12T01:59:37.626295+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T01:59:37.626295+00:00",
+          "outcome": "useful",
+          "q": "давай теперь разберемся с home все ли файлы здесь на своих местах и нет ли смысла разнести хелперы модели и тп?"
+        },
+        {
+          "date": "2026-08-12T01:39:35.644752+00:00",
+          "outcome": "useful",
+          "q": "@src/pages/home/ мне не нравится то как используются данные. давай не будем прокидывать их по пропсам, а сделаем контекст провайдер."
+        }
+      ],
+      "score": 1.997072959,
+      "source_file": "src/pages/home/ui/MediaDownloadDialog.tsx",
+      "status": "preferred",
+      "uses": 2
+    },
+    "src_pages_home_ui_mediadownloaddialog_mediadownloaddialog": {
+      "code_fingerprint": "011f6f8a2789187976964d5f616f1cf8080360f94e867869d88f95f81c606d50",
+      "label": "MediaDownloadDialog()",
+      "last": "2026-08-12T02:12:28.269732+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T02:12:28.269732+00:00",
+          "outcome": "useful",
+          "q": "Исправь MediaDownloadDialog.tsx: двойных кондишенов быть не должно"
+        },
+        {
+          "date": "2026-08-12T02:01:19.836314+00:00",
+          "outcome": "useful",
+          "q": "мне кажется в productMediaContext.tsx слишком много всего, можем как это исправить?"
+        }
+      ],
+      "score": 1.997627054,
+      "source_file": "src/pages/home/ui/MediaDownloadDialog.tsx",
+      "status": "preferred",
+      "uses": 2
+    },
+    "src_shared_lib_wildberries_media_getwildberriesphotourl": {
+      "code_fingerprint": "640f8c8a3e1f106ab361c86466a40eafee2c0b88ae235c4d513fb5c8b487ce65",
+      "label": "GetWildberriesPhotoUrl",
+      "last": "2026-08-12T02:22:17.190633+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T02:22:17.190633+00:00",
+          "outcome": "useful",
+          "q": "[getProductMedia.ts](src/pages/home/api/getProductMedia.ts) мне не нравится код в этом файле, что можем исправить?"
+        }
+      ],
+      "score": 0.999060124,
+      "source_file": "src/shared/lib/wildberries-media.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "vite": {
+      "code_fingerprint": "980c54de694301ce7e59c80575f68d5ee2ffe45809fbeec77f6c3367ebfa9399",
+      "label": "vite",
+      "last": "2026-08-12T03:03:05.582389+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-12T03:03:05.582389+00:00",
+          "outcome": "useful",
+          "q": "окей, серверный прокси может подойти. покажи вариант реализации"
+        }
+      ],
+      "score": 0.999714467,
+      "source_file": "package.json",
+      "status": "tentative",
+      "uses": 1
+    }
+  },
+  "version": 1
+}

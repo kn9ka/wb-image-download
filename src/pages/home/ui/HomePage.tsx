@@ -1,26 +1,31 @@
 import DownloadIcon from "@mui/icons-material/Download";
-import { useForm } from "@tanstack/react-form";
 import { Button, Container, Stack, TextField } from "@mui/material";
 import { useState } from "react";
-import { z } from "zod";
 
 import { useNotification } from "@/shared/ui/notifications";
 
-import { useMediaSelection } from "../model/useMediaSelection";
+import { getProductMedia } from "../api/getProductMedia";
+import { useForm } from "../lib/useForm";
+import { FormFieldKey } from "../model/Form";
+import type { ProductMedia } from "../model/ProductMedia";
 
 import { MediaDownloadDialog } from "./MediaDownloadDialog";
 
-const articleIdSchema = z.string().regex(/^\d+$/, "Введите Article ID");
+type LoadedProductMedia = {
+  articleId: string;
+  media: ProductMedia[];
+};
 
 export const HomePage = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const mediaSelection = useMediaSelection();
+  const [productMedia, setProductMedia] = useState<LoadedProductMedia | null>(null);
   const { notify } = useNotification();
   const form = useForm({
-    defaultValues: { articleId: "" },
-    onSubmit: () => {
-      mediaSelection.resetSelection();
-      setIsDialogOpen(true);
+    onSubmit: async ({ articleId }) => {
+      try {
+        setProductMedia({ articleId, media: await getProductMedia(articleId) });
+      } catch (error) {
+        notify(error instanceof Error ? error.message : "Не удалось загрузить медиа");
+      }
     },
   });
 
@@ -30,45 +35,51 @@ export const HomePage = () => {
         component="form"
         onSubmit={(event) => {
           event.preventDefault();
-          void form.handleSubmit();
+
+          if (!form.state.isSubmitting) {
+            void form.handleSubmit();
+          }
         }}
         spacing={3}
         sx={{ maxWidth: 720 }}
       >
         <Stack direction={{ sm: "row" }} spacing={2} sx={{ alignItems: "flex-start" }}>
-          <form.Field name="articleId" validators={{ onSubmit: articleIdSchema }}>
+          <form.Field name={FormFieldKey.articleId}>
             {(field) => (
               <TextField
-                error={field.state.meta.errors.length > 0}
                 fullWidth
-                helperText={field.state.meta.errors.length > 0 ? "Введите Article ID" : undefined}
                 label="Article ID"
+                error={field.state.meta.errors.length > 0}
+                helperText={field.state.meta.errors.length > 0 ? "Введите Article ID" : undefined}
                 onBlur={field.handleBlur}
                 onChange={(event) => field.handleChange(event.target.value.replace(/\D/g, ""))}
                 value={field.state.value}
               />
             )}
           </form.Field>
-          <Button size="small" startIcon={<DownloadIcon />} type="submit" variant="contained">
-            Скачать фото и видео
-          </Button>
+          <form.Subscribe selector={(state) => state.isSubmitting}>
+            {(isSubmitting) => (
+              <Button
+                disabled={isSubmitting}
+                size="small"
+                startIcon={<DownloadIcon />}
+                type="submit"
+                variant="contained"
+              >
+                Скачать фото и видео
+              </Button>
+            )}
+          </form.Subscribe>
         </Stack>
       </Stack>
 
-      <MediaDownloadDialog
-        isAllSelected={mediaSelection.isAllSelected}
-        isOpen={isDialogOpen}
-        isPartlySelected={mediaSelection.isPartlySelected}
-        onClose={() => setIsDialogOpen(false)}
-        onDownload={(type) =>
-          notify(
-            `Скачивание ${type === "photo" ? "фото" : "видео"} будет доступно после подключения API`,
-          )
-        }
-        onToggleAll={mediaSelection.toggleAllMedia}
-        onToggleMedia={mediaSelection.toggleMedia}
-        selectedMedia={mediaSelection.selectedMedia}
-      />
+      {productMedia && (
+        <MediaDownloadDialog
+          articleId={productMedia.articleId}
+          media={productMedia.media}
+          onClose={() => setProductMedia(null)}
+        />
+      )}
     </Container>
   );
 };

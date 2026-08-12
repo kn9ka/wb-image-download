@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786486713.003448,
-    "ast_hash": "647d00d289ab407e450829f2e75be525",
+    "mtime": 1786503559.4375284,
+    "ast_hash": "6f3d8889dbbf523866be6aa95e4bb521",
     "semantic_hash": ""
   },
   "skills-lock.json": {
@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "src/pages/home/ui/HomePage.tsx": {
-    "mtime": 1786487213.0275111,
-    "ast_hash": "5fb192cf8941d86b811d90320efe78a4",
+    "mtime": 1786500834.424211,
+    "ast_hash": "8796ae97959f690ab6f2ac002dcc78ed",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -50,8 +50,8 @@
     "semantic_hash": ""
   },
   "vite.config.ts": {
-    "mtime": 1786482077.9539294,
-    "ast_hash": "2d25a9729c5117835ed677625a9c4d19",
+    "mtime": 1786503559.3136456,
+    "ast_hash": "d833ab8c39d47aec31dcd122dea706a0",
     "semantic_hash": ""
   },
   ".agents/skills/feature-sliced-design/SKILL.md": {
@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786481136.396025,
-    "ast_hash": "7b1e5395714b6f84f85ee60355ac4065",
+    "mtime": 1786497562.4699829,
+    "ast_hash": "40a86334859ad01fd4c0381807d57ea7",
     "semantic_hash": ""
   },
   "index.html": {
@@ -169,54 +169,119 @@
     "ast_hash": "3f5827ab19f037d2457d5b74eb9b33d7",
     "semantic_hash": ""
   },
-  "src/pages/home/ui/tote-bag.png": {
-    "mtime": 1786486155.2513812,
-    "ast_hash": "af71355d98a36076d94d8416e208b775",
-    "semantic_hash": ""
-  },
-  "src/pages/home/model/media.ts": {
-    "mtime": 1786486431.3856242,
-    "ast_hash": "4eb8326bb5acbaf19ee1172bdaf9d525",
-    "semantic_hash": ""
-  },
   "src/pages/home/model/useMediaSelection.ts": {
-    "mtime": 1786486720.983125,
-    "ast_hash": "a39cd5806c13470cbf460189e871d32b",
+    "mtime": 1786500003.021516,
+    "ast_hash": "378180278cd4e6dae5b0e8dfb332fc92",
     "semantic_hash": ""
   },
   "src/pages/home/ui/MediaDownloadDialog.tsx": {
-    "mtime": 1786487317.3879488,
-    "ast_hash": "a4111ddce1e2e523d33d5cb4dcc0db84",
-    "semantic_hash": ""
-  },
-  ".playwright-mcp/page-2026-08-11T22-21-31-113Z.yml": {
-    "mtime": 1786487028.3098657,
-    "ast_hash": "6107d40e32f094819074091578971d74",
-    "semantic_hash": ""
-  },
-  ".playwright-mcp/page-2026-08-11T22-21-42-113Z.yml": {
-    "mtime": 1786487028.3094633,
-    "ast_hash": "5472134c9549455aed6be6dce910d2cf",
-    "semantic_hash": ""
-  },
-  ".playwright-mcp/page-2026-08-11T22-22-55-031Z.yml": {
-    "mtime": 1786487028.3097684,
-    "ast_hash": "6107d40e32f094819074091578971d74",
-    "semantic_hash": ""
-  },
-  ".playwright-mcp/page-2026-08-11T22-23-04-161Z.yml": {
-    "mtime": 1786487028.3096733,
-    "ast_hash": "5472134c9549455aed6be6dce910d2cf",
-    "semantic_hash": ""
-  },
-  ".playwright-mcp/page-2026-08-11T22-23-30-844Z.yml": {
-    "mtime": 1786487028.309677,
-    "ast_hash": "6107d40e32f094819074091578971d74",
+    "mtime": 1786503711.431369,
+    "ast_hash": "9b50ee3b4aac195cfdaaa80ffb77c240",
     "semantic_hash": ""
   },
   "src/shared/ui/notifications.tsx": {
     "mtime": 1786487212.8795114,
     "ast_hash": "bc9516419fd28828609a5b013c8f5bc7",
+    "semantic_hash": ""
+  },
+  "src/pages/home/api/getProductMedia.ts": {
+    "mtime": 1786503564.3354897,
+    "ast_hash": "f155551f85a6a0ee582f14c98752ef86",
+    "semantic_hash": ""
+  },
+  "src/pages/home/model/downloadMedia.ts": {
+    "mtime": 1786499250.9477062,
+    "ast_hash": "fd0e21f3880e9c535b2317dd21da9f54",
+    "semantic_hash": ""
+  },
+  "src/shared/lib/index.ts": {
+    "mtime": 1786499065.1743186,
+    "ast_hash": "ad623345eaa7ca5d5417d9a5449a3965",
+    "semantic_hash": ""
+  },
+  "src/shared/lib/wildberries-media.ts": {
+    "mtime": 1786499520.0801117,
+    "ast_hash": "bb2306ef2b1ad2c88b65017ad455cb61",
+    "semantic_hash": ""
+  },
+  "src/shared/lib/archive.ts": {
+    "mtime": 1786496923.9424467,
+    "ast_hash": "d3a2ca26e04ac5dddf96b429a7b8acad",
+    "semantic_hash": ""
+  },
+  "src/pages/home/config/Form.ts": {
+    "mtime": 1786499069.4242785,
+    "ast_hash": "ce7d4853642ef5c8cb48b27a5e49191d",
+    "semantic_hash": ""
+  },
+  "src/pages/home/lib/useForm.ts": {
+    "mtime": 1786499042.733264,
+    "ast_hash": "e035fb0db0459446c9bef78468c291c8",
+    "semantic_hash": ""
+  },
+  "src/pages/home/model/Form.ts": {
+    "mtime": 1786499024.987124,
+    "ast_hash": "ea7a74f1b66ab49bac2c02da7be00958",
+    "semantic_hash": ""
+  },
+  "src/shared/lib/form.ts": {
+    "mtime": 1786498514.2676346,
+    "ast_hash": "074dfd4b7bb38bce7351ec04bfda6e3e",
+    "semantic_hash": ""
+  },
+  "src/shared/lib/validation.ts": {
+    "mtime": 1786499056.634788,
+    "ast_hash": "9051cb78fde18203a006fa7ae6fea543",
+    "semantic_hash": ""
+  },
+  "src/pages/home/model/ProductMedia.ts": {
+    "mtime": 1786499270.0057104,
+    "ast_hash": "5d437121892472748b838fd65152aa9b",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_013935_src_pages_home__\u043c\u043d\u0435_\u043d\u0435_\u043d\u0440\u0430\u0432\u0438\u0442\u0441\u044f_\u0442\u043e_\u043a\u0430\u043a_\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0442.md": {
+    "mtime": 1786498775.6456335,
+    "ast_hash": "2f2606a23afac0bf1a78787d78ae4fa5",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_015937_\u0434\u0430\u0432\u0430\u0439_\u0442\u0435\u043f\u0435\u0440\u044c_\u0440\u0430\u0437\u0431\u0435\u0440\u0435\u043c\u0441\u044f_\u0441_home_\u0432\u0441\u0435_\u043b\u0438_\u0444\u0430\u0439\u043b\u044b_\u0437\u0434\u0435\u0441\u044c.md": {
+    "mtime": 1786499977.6274462,
+    "ast_hash": "2e55170034dbb43fbd4914d6b70ab283",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_020119_\u043c\u043d\u0435_\u043a\u0430\u0436\u0435\u0442\u0441\u044f_\u0432_productmediacontext_tsx_\u0441\u043b\u0438\u0448\u043a\u043e\u043c_\u043c\u043d\u043e\u0433.md": {
+    "mtime": 1786500079.8372655,
+    "ast_hash": "2d6cd9dbf8d547590c2a91bc70abac7d",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_021033_setproductmedia_\u0441_await_getproductmedia___\u044d\u0442\u043e_\u043f\u0440\u0430\u0432.md": {
+    "mtime": 1786500633.9662597,
+    "ast_hash": "60e7b8bdfd37eecb2bdecbff8e3c9cc4",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_021228_\u0438\u0441\u043f\u0440\u0430\u0432\u044c_mediadownloaddialog_tsx__\u0434\u0432\u043e\u0439\u043d\u044b\u0445_\u043a\u043e\u043d\u0434\u0438\u0448\u0435\u043d\u043e.md": {
+    "mtime": 1786500748.2707133,
+    "ast_hash": "cdc65094948ca1cc6f40aaf046fb184b",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_021936_\u0441\u0434\u0435\u043b\u0430\u0439_\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0443_\u043f\u043e\u0432\u0442\u043e\u0440\u043d\u043e\u0433\u043e_submit_\u0447\u0435\u0440\u0435\u0437_issubmit.md": {
+    "mtime": 1786501176.8002648,
+    "ast_hash": "25189c8b67f1afbe9e62548c189e923e",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_022217_getproductmedia_ts__src_pages_home_api_getproduct.md": {
+    "mtime": 1786501337.1919937,
+    "ast_hash": "9418e5a40caddaf166acd4d0e98ee590",
+    "semantic_hash": ""
+  },
+  "src/pages/home/lib/filters.ts": {
+    "mtime": 1786500835.6499267,
+    "ast_hash": "a39a7d78f6676450db224d297954c7d6",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260812_025029_\u043f\u0440\u043e\u0432\u0435\u0434\u0438_\u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442__\u0441\u043c\u043e\u0436\u0435\u043c_\u043b\u0438_\u043c\u044b_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0435\u0439_\u043d\u0430_rem.md": {
+    "mtime": 1786503029.586336,
+    "ast_hash": "dd18d4bd913c4bac14718679549d8e7b",
     "semantic_hash": ""
   }
 }
